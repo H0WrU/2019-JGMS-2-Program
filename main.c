@@ -1,6 +1,7 @@
 #include <kipr/botball.h>
 int rm=0;
 int lm=3;
+int rs
 int claw=1;
 int arm=4;
 int back=3;
@@ -36,8 +37,12 @@ int main()
     bmd(lm);
     
     //go foward till black
-    
-    
+      while(analog(1) < 1500)
+    {
+        motor(rm,rs);
+        motor(lm,ls);
+    }
+    ao();
     
     disable_servos();
     return 0;
